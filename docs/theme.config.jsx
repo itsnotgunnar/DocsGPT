@@ -14,7 +14,7 @@ const Logo = ({ height, width }) => {
     <div style={{ alignItems: 'center', display: 'flex', gap: '8px' }}>
        <Image src={CuteLogo} alt="DocsGPT logo" width={width} height={height} />
 
-      <span style={{ fontWeight: 'bold', fontSize: 18 }}>DocsGPT Docs</span>
+      <span style={{ fontWeight: 'bold', fontSize: 18 }}>Docs</span>
 
 
     </div>
@@ -30,7 +30,7 @@ const config = {
     key: 'docs-launch',
     text: (
       <div className="flex justify-center items-center gap-2">
-        Welcome to the new DocsGPT 🦖 docs! 👋
+        Welcome to the documentation!
       </div>
     ),
   },
@@ -49,7 +49,7 @@ const config = {
     light: 212,
   },
   footer: {
-    text: `MIT ${new Date().getFullYear()} © DocsGPT`,
+    text: `MIT ${new Date().getFullYear()} © gunnar.ai`,
   },
   logo() {
     return (
@@ -60,20 +60,20 @@ const config = {
   },
   useNextSeoProps() {
     return {
-      titleTemplate: `%s - DocsGPT Documentation`,
+      titleTemplate: `%s - gunnar.ai documentation`,
     };
   },
 
   head() {
     const { frontMatter } = useConfig();
     const { theme } = useTheme();
-    const title = frontMatter?.title || 'Chat with your data with DocsGPT';
+    const title = frontMatter?.title || 'Chat with your data!';
     const description =
       frontMatter?.description ||
-      'Use DocsGPT to chat with your data. DocsGPT is a GPT powered chatbot that can answer questions about your data.'
+      'You are using a GPT powered chatbot that can answer questions about your data.'
     const image = '/cute-docsgpt.png';
 
-    const composedTitle = `${title} – DocsGPT Documentation`;
+    const composedTitle = `${title} – documentation`;
 
     return (
       <>
