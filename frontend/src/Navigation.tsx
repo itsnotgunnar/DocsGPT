@@ -7,8 +7,6 @@ import Message from './assets/message.svg';
 import Hamburger from './assets/hamburger.svg';
 import Key from './assets/key.svg';
 import Info from './assets/info.svg';
-import Link from './assets/link.svg';
-import Discord from './assets/discord.svg';
 import Github from './assets/github.svg';
 import UploadIcon from './assets/upload.svg';
 import { ActiveState } from './models/misc';
@@ -305,7 +303,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 border-b-2 py-2">
+        <div className="border-t-2">
           <NavLink
             to="/about"
             className={({ isActive }) =>
@@ -317,38 +315,18 @@ export default function Navigation() {
             <img src={Info} alt="info" className="ml-2 w-5" />
             <p className="my-auto text-eerie-black">About</p>
           </NavLink>
-
           <a
-            href="https://docs.docsgpt.co.uk/"
+            href="https://github.com/arc53/DocsGPT"
             target="_blank"
             rel="noreferrer"
             className="my-auto mx-4 flex h-12 cursor-pointer gap-4 rounded-3xl hover:bg-gray-100"
           >
-            <img src={Link} alt="link" className="ml-2 w-5" />
-            <p className="my-auto text-eerie-black">Documentation</p>
+            <img src={Github} alt="link" className="ml-2 w-5" />
+            <p className="my-auto text-eerie-black">Visit our GitHub</p>
           </a>
-          <div className="border-t-2">
-            <a
-              href="https://discord.gg/WHJdfbQDR4"
-              target="_blank"
-              rel="noreferrer"
-              className="my-auto mx-4 flex h-12 cursor-pointer gap-4 rounded-3xl hover:bg-gray-100"
-            >
-              <img src={Discord} alt="link" className="ml-2 w-5" />
-              <p className="my-auto text-eerie-black">Visit our Discord</p>
-            </a>
-            <a
-              href="https://github.com/arc53/DocsGPT"
-              target="_blank"
-              rel="noreferrer"
-              className="my-auto mx-4 flex h-12 cursor-pointer gap-4 rounded-3xl hover:bg-gray-100"
-            >
-              <img src={Github} alt="link" className="ml-2 w-5" />
-              <p className="my-auto text-eerie-black">Visit our GitHub</p>
-            </a>
-          </div>
         </div>
       </div>
+
       <div className="fixed h-16 w-full border-b-2 bg-gray-50 md:hidden">
         <button
           className="mt-5 ml-6 h-6 w-6 md:hidden"
